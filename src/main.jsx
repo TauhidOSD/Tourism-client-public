@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 
 import {
@@ -12,6 +11,9 @@ import NotFoundPage from './Components/Root/NotFoundPage/NotFoundPage.jsx';
 import Home from './Components/Root/Home/Home.jsx';
 import Footer from './Components/Root/Home/Footer/Footer.jsx';
 import NavBer from './Components/Root/NavBer/NavBer.jsx';
+import Login from './Components/Root/Login/Login.jsx';
+import Register from './Components/Root/Register/Register.jsx';
+import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path:'/NavBer',
         element:<NavBer></NavBer>
+      },
+      {
+        path:'/Login',
+        element:<Login></Login>
+      },
+      {
+        path:'/Register',
+        element:<Register></Register>
       }
     ]
   },
@@ -37,6 +47,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

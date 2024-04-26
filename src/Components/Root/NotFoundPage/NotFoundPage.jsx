@@ -1,10 +1,10 @@
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 const NotFoundPage = () => {
     return (
         <div className="text-center">
-        <Helmet>
+        {/* <Helmet>
             <title>Not Found</title>
-        </Helmet>
+        </Helmet> */}
         <h1 className="text-[400px] font-bold">
             404
         </h1>
