@@ -1,8 +1,10 @@
 
+
 const Home = () => {
     return (
         <div>
-            <h3>This is home Section</h3>
+           
+           <h3>This is home</h3> 
         </div>
     );
 };

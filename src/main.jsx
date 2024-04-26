@@ -8,12 +8,11 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
 import NotFoundPage from './Components/Root/NotFoundPage/NotFoundPage.jsx';
+
 import Home from './Components/Root/Home/Home.jsx';
-import Footer from './Components/Root/Home/Footer/Footer.jsx';
 import NavBer from './Components/Root/NavBer/NavBer.jsx';
-import Login from './Components/Root/Login/Login.jsx';
-import Register from './Components/Root/Register/Register.jsx';
-import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
+import AllTourist from './Components/Root/AllTourist/AllTourist.jsx';
+import AddTourist from './Components/Root/AddTourist/AddTourist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,30 +24,27 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>
       },
+   
       {
-        path:'/Footer',
-        element:<Footer></Footer>
+        path:'/AllTourist',
+        element:<AllTourist></AllTourist>
       },
       {
-        path:'/NavBer',
-        element:<NavBer></NavBer>
-      },
-      {
-        path:'/login',
-        element:<Login></Login>
-      },
-      {
-        path:'/register',
-        element:<Register></Register>
+        path:'/AddTourist',
+        element:<AddTourist></AddTourist>
       }
+
+      
+      
+      
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
+    
     <RouterProvider router={router} />
-    </AuthProvider>
+    
   </React.StrictMode>,
 )
