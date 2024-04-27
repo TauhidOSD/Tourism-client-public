@@ -12,6 +12,9 @@ import NavBer from './Components/Root/NavBer/NavBer.jsx';
 import AllTourist from './Components/Root/AllTourist/AllTourist.jsx';
 import Home from './Components/Root/Home/Home.jsx';
 import AddTourist from './Components/Root/AddTourist/AddTourist.jsx';
+// import Card from './Components/Root/Card/Card.jsx';
+import Banner from './Components/Root/Banner/Banner.jsx';
+import Card from './Components/Root/Card/Card.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +29,9 @@ const router = createBrowserRouter([
    
       {
         path:'/AllTourist',
-        element:<AllTourist></AllTourist>
+        element:<AllTourist></AllTourist>,
+        
+        loader: () => fetch('http://localhost:5000/Place')
       },
       {
         path:'/AddTourist',
@@ -35,6 +40,18 @@ const router = createBrowserRouter([
       {
         path:'/NavBer',
         element:<NavBer></NavBer>
+      },
+      {
+        path:'/card',
+        element:<Card></Card>,
+       
+        
+        
+        
+      },
+      {
+        path:'/Banner',
+        element:<Banner></Banner>
       }
 
       

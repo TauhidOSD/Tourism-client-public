@@ -1,9 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 
 const AllTourist = () => {
+
+    const places=useLoaderData();
     
     return (
         <div>
-            <h3>This is Tourist Page</h3>
+            <h3>Beatutiful country:{places.length}</h3>
             
         </div>
     );
