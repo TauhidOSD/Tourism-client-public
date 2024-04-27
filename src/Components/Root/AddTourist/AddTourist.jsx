@@ -34,7 +34,7 @@ const AddTourist = () => {
   };
 
   return (
-    <div className="bg-[#F4F3F0] p-24">
+    <div className="bg-[#F4F3F0] p-4 md:p-24">
       <h2 className="text-3xl font-extrabold">Add a Place</h2>
       <form onSubmit={handleAddPlace}>
         {/*image and sportName */}
@@ -53,7 +53,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text">Spot name</span>
             </label>
@@ -84,7 +84,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text">location</span>
             </label>
@@ -115,7 +115,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text">average_cost</span>
             </label>
@@ -146,7 +146,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text">travel_time</span>
             </label>
@@ -177,11 +177,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-         
-        </div>
-        {/* userName and sportName */}
-        <div className="md:flex mb-6">
-          <div className="form-control md:w-1/2">
+          <div className="form-control md:w-1/2 md:ml-4">
             <label className="label">
               <span className="label-text">User Name</span>
             </label>
@@ -195,7 +191,12 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
+         
+        </div>
+        {/* userName and sportName */}
+        <div className="md:flex mb-6">
+        
+          <div className="form-control md:w-full ">
             <label className="label">
               <span className="label-text">User Email</span>
             </label>
