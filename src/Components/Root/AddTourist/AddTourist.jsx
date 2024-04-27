@@ -16,7 +16,7 @@ const AddTourist = () => {
     const UserEmail = form.UserEmail.value;
     const UserName = form.UserName.value;
 
-    const newSpace = {
+    const newPlace = {
       image,
       sportName,
       country,
@@ -29,9 +29,23 @@ const AddTourist = () => {
       UserEmail,
       UserName
     }
-    console.log(newSpace);
+    console.log(newPlace);
+
+    //send data to the server
+    fetch('http://localhost:5000/Place',{
+        method:'POST',
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(newPlace)
+
+    })
+    .then(res=>res.json())
+    .then(data =>{
+        console.log(data);
+    })
     
-  };
+  }
 
   return (
     <div className="bg-[#F4F3F0] p-4 md:p-24">
