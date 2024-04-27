@@ -1,8 +1,42 @@
 const AddTourist = () => {
+  
+    const handleAddPlace = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const image = form.image.value;
+    const sportName = form.sportName.value;
+    const country = form.country.value;
+    const location = form.location.value;
+    const shortDescription = form.shortDescription.value;
+    const averageCost = form.averageCost.value;
+    const seasonality = form.seasonality.value;
+    const travelTime = form.travelTime.value;
+    const totalVisitorsPerYear = form.totalVisitorsPerYear.value;
+    const UserEmail = form.UserEmail.value;
+    const UserName = form.UserName.value;
+
+    const newSpace = {
+      image,
+      sportName,
+      country,
+      location,
+      shortDescription,
+      averageCost,
+      seasonality,
+      travelTime,
+      totalVisitorsPerYear,
+      UserEmail,
+      UserName
+    }
+    console.log(newSpace);
+    
+  };
+
   return (
     <div className="bg-[#F4F3F0] p-24">
       <h2 className="text-3xl font-extrabold">Add a Place</h2>
-      <form>
+      <form onSubmit={handleAddPlace}>
         {/*image and sportName */}
         <div className="md:flex mb-6">
           <div className="form-control md:w-1/2">
@@ -119,7 +153,7 @@ const AddTourist = () => {
             <label>
               <input
                 type="text"
-                name="travel_time"
+                name="travelTime"
                 placeholder="travel_time"
                 className="input input-bordered w-full"
                 required
@@ -143,20 +177,7 @@ const AddTourist = () => {
               />
             </label>
           </div>
-          <div className="form-control md:w-1/2 ml-4">
-            <label className="label">
-              <span className="label-text">User Email</span>
-            </label>
-            <label>
-              <input
-                type="text"
-                name="Email"
-                placeholder="Email"
-                className="input input-bordered w-full"
-                required
-              />
-            </label>
-          </div>
+         
         </div>
         {/* userName and sportName */}
         <div className="md:flex mb-6">
@@ -176,26 +197,27 @@ const AddTourist = () => {
           </div>
           <div className="form-control md:w-1/2 ml-4">
             <label className="label">
-              <span className="label-text">Spot name</span>
+              <span className="label-text">User Email</span>
             </label>
             <label>
               <input
                 type="text"
-                name="sportName"
-                placeholder="Spot name"
+                name="UserEmail"
+                placeholder="User Email"
                 className="input input-bordered w-full"
                 required
               />
             </label>
           </div>
         </div>
-      </form>
+     
 
       <input
         type="submit"
         value="Add Place "
         className="btn btn-block bg-slate-700 text-white font-bold text-xl"
       />
+       </form>
     </div>
   );
 };
