@@ -16,6 +16,7 @@ import AddTourist from './Components/Root/AddTourist/AddTourist.jsx';
 import Banner from './Components/Root/Banner/Banner.jsx';
 import Card from './Components/Root/Card/Card.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
+import MyListPage from './Components/Root/MyListPage/MyListPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
         element:<CardDetails></CardDetails>,
         loader: () => fetch('http://localhost:5000/Place')
 
+      },
+      {
+        path:'/myListedPage',
+        element:<MyListPage></MyListPage>
       }
 
       

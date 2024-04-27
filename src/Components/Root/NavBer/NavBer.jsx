@@ -12,6 +12,9 @@ const NavBer = () => {
       <li>
         <NavLink to="/AddTourist">Add Tourists Spot</NavLink>
       </li>
+      <li>
+        <NavLink to="/myListedPage">My List Page</NavLink>
+      </li>
     </>
   );
 
