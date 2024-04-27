@@ -15,6 +15,7 @@ import AddTourist from './Components/Root/AddTourist/AddTourist.jsx';
 // import Card from './Components/Root/Card/Card.jsx';
 import Banner from './Components/Root/Banner/Banner.jsx';
 import Card from './Components/Root/Card/Card.jsx';
+import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,6 @@ const router = createBrowserRouter([
         path:'/AllTourist',
         element:<AllTourist></AllTourist>,
         
-        loader: () => fetch('http://localhost:5000/Place')
       },
       {
         path:'/AddTourist',
@@ -45,17 +45,18 @@ const router = createBrowserRouter([
         path:'/card',
         element:<Card></Card>,
        
-        
-        
-        
       },
       {
         path:'/Banner',
         element:<Banner></Banner>
+      },
+      {
+        path:'/:_id',
+        element:<CardDetails></CardDetails>,
+        loader: () => fetch('http://localhost:5000/Place')
+
       }
 
-      
-      
       
     ]
   },

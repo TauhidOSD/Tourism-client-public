@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   const [Cards, setCards] = useState([]);
@@ -26,24 +27,26 @@ const Card = () => {
           <div className="flex flex-col justify-between p-6 space-y-8">
             <div className="space-y-2">
               <h2 className="text-3xl font-semibold tracking-wide">{}</h2>
-              {/* <p className="dark:text-gray-800">{Card?.slice(0, 75)}</p> */}
+              <p className="dark:text-gray-800   ">Location : {Card?.location.slice(0, 75)}</p>
             </div>
             <div className="flex justify-between">
               <div>
-                <h2 className="text-xl font-semibold">Price : {}</h2>
+                <h2 className="text-xl font-semibold">Country : {Card?.country}</h2>
               </div>
               <div>
-                <h2 className="text-xl font-semibold">Area : {}</h2>
+                <h2 className="text-xl font-semibold">Seasonality: {Card?.seasonality}</h2>
               </div>
             </div>
 
+            <Link to={`/${Card?._id}`}>
             <button
               type="button"
               className="   bg-slate-700 text-white  text-xl flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"
-              // fdprocessedid="led2je"
+            //   fdprocessedid="led2je"
             >
-              Read more
+              View details
             </button>
+            </Link>
           </div>
         </div>
       ))}
