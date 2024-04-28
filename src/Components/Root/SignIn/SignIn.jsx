@@ -28,6 +28,7 @@ const SignIn = () => {
     const password = form.password.value;
     console.log(email,password);
     login(email, password)
+    
       .then((result) => {
         // eslint-disable-next-line no-unused-vars
         const loggedUser = result.user;
