@@ -17,6 +17,9 @@ import Card from './Components/Root/Card/Card.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
 import MyListPage from './Components/Root/MyListPage/MyListPage.jsx';
 import UpdatePage from './Components/Root/UpdatePage/UpdatePage.jsx';
+import SignUp from './Components/Root/SignUp/SignUp.jsx';
+import SignIn from './Components/Root/SignIn/SignIn.jsx';
+import AuthProvider from './Provider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +69,14 @@ const router = createBrowserRouter([
         element:<UpdatePage></UpdatePage>,
         loader:({params}) => fetch(`http://localhost:5000/Place/${params.id}`)
         
+      },
+      {
+        path:'/SignUp',
+        element:<SignUp></SignUp>
+      },
+      {
+        path:'/SignIn',
+        element:<SignIn></SignIn>
       }
 
       
@@ -76,7 +87,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
+    <AuthProvider>
     <RouterProvider router={router} />
-    
+
+    </AuthProvider>
   </React.StrictMode>,
 )
