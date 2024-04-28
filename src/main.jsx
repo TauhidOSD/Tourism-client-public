@@ -12,11 +12,11 @@ import NavBer from './Components/Root/NavBer/NavBer.jsx';
 import AllTourist from './Components/Root/AllTourist/AllTourist.jsx';
 import Home from './Components/Root/Home/Home.jsx';
 import AddTourist from './Components/Root/AddTourist/AddTourist.jsx';
-// import Card from './Components/Root/Card/Card.jsx';
 import Banner from './Components/Root/Banner/Banner.jsx';
 import Card from './Components/Root/Card/Card.jsx';
 import CardDetails from './Components/Root/CardDetails/CardDetails.jsx';
 import MyListPage from './Components/Root/MyListPage/MyListPage.jsx';
+import UpdatePage from './Components/Root/UpdatePage/UpdatePage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +60,12 @@ const router = createBrowserRouter([
       {
         path:'/myListedPage',
         element:<MyListPage></MyListPage>
+      },
+      {
+        path:'/UpdatePage/:id',
+        element:<UpdatePage></UpdatePage>,
+        loader:({params}) => fetch(`http://localhost:5000/Place/${params.id}`)
+        
       }
 
       
