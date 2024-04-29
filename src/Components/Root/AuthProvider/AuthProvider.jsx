@@ -11,7 +11,6 @@ import {
 
 import { GoogleAuthProvider } from "firebase/auth";
 import { GithubAuthProvider } from "firebase/auth";
-// import auth from "../../Firebase/Firebase.config";
 import auth from "./../FireBase/FireBase.config"
 
 export const AuthContext = createContext(null);
