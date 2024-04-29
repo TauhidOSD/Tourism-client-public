@@ -23,6 +23,7 @@ import SignIn from './Components/Root/SignIn/SignIn.jsx';
 import Footer from './Components/Root/Footer/Footer.jsx';
 import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './Components/Root/PrivateRoute/PrivateRoute.jsx';
+import TestSection from './Components/Root/TextSection/TestSection.jsx';
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
       {
         path:'/Footer',
         element:<Footer></Footer>
+      },
+      {
+        path:'TextSection',
+        element:<TestSection></TestSection>
       }
 
       

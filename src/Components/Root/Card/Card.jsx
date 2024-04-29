@@ -57,13 +57,7 @@ const Card = () => {
               </button>
        </div>
 
-              {/* <button
-                type="button"
-                className="   bg-slate-700 text-white  text-xl flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"
-                //   fdprocessedid="led2je"
-              >
-                View details
-              </button> */}
+             
             </Link>
           </div>
         </div>

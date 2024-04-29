@@ -40,16 +40,20 @@ const NavBer = () => {
   const links = (
     <>
       <li className="mr-4">
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/">
+        <div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="Home">Home</div></NavLink>
       </li>
       <li className="mr-4">
-        <NavLink to="/AllTourist">All Tourists Spot</NavLink>
+        <NavLink to="/AllTourist"><div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="All">All Tourists Spot</div>
+            </NavLink>
       </li>
       <li className="mr-4">
-        <NavLink to="/AddTourist">Add Tourists Spot</NavLink>
+        <NavLink to="/AddTourist">
+        <div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="Add">Add Tourists Spot</div></NavLink>
       </li>
       <li className="mr-4">
-        <NavLink to="/myListedPage">My List Page</NavLink>
+        <NavLink to="/myListedPage">
+        <div className=" px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="List">My List Page</div></NavLink>
       </li>
     </>
   );
@@ -82,7 +86,7 @@ const NavBer = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl md:text-4xl font-bold  ">
-         Tourist
+         <span className="font-bold text-6xl text-orange-500">T_</span>ourist
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -117,16 +121,16 @@ const NavBer = () => {
         {user ? (
           <button
             onClick={handleLogOut}
-            className="btn btn-outline btn-error text-white font-bold"
+            className="px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 btn btn-outline btn-error text-white font-bold"
           >
-            LogOut
+            SignOut
           </button>
         ) : (
           <Link
             to="/SignIn"
-            className="btn btn-outline btn-error text-white font-bold"
+            className="px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 btn btn-outline btn-error text-white font-bold"
           >
-            Login
+            SignIn
           </Link>
         )}
 
