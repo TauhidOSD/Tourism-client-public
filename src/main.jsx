@@ -25,6 +25,7 @@ import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './Components/Root/PrivateRoute/PrivateRoute.jsx';
 import TestSection from './Components/Root/TextSection/TestSection.jsx';
 import Country from './Components/Root/Country/Country.jsx';
+import Country_Text from './Components/Root/Country_Text/Country_Text.jsx';
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
       {
         path:'/country',
         element:<Country></Country>
+      },
+      {
+        path:'/Country_Text',
+        element:<Country_Text></Country_Text>
       }
 
       
