@@ -20,6 +20,7 @@ import UpdatePage from './Components/Root/UpdatePage/UpdatePage.jsx';
 import SignUp from './Components/Root/SignUp/SignUp.jsx';
 import SignIn from './Components/Root/SignIn/SignIn.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import Footer from './Components/Root/Footer/Footer.jsx';
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path:'/SignIn',
         element:<SignIn></SignIn>
+      },
+      {
+        path:'/Footer',
+        element:<Footer></Footer>
       }
 
       
