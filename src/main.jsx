@@ -24,6 +24,7 @@ import Footer from './Components/Root/Footer/Footer.jsx';
 import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './Components/Root/PrivateRoute/PrivateRoute.jsx';
 import TestSection from './Components/Root/TextSection/TestSection.jsx';
+import Country from './Components/Root/Country/Country.jsx';
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
       {
         path:'TextSection',
         element:<TestSection></TestSection>
+      },
+      {
+        path:'/country',
+        element:<Country></Country>
       }
 
       
