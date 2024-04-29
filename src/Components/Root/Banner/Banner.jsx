@@ -1,9 +1,28 @@
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/bundle";
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
+import "./Banner.css"
 const Banner = () => {
     return (
         <div>
-            <h3>This is Banner</h3>
-        </div>
+        <Swiper navigation={true} loop={true} modules={[Navigation, Autoplay,Pagination]} pagination={{clickable:true}} autoplay={{delay:2000}} className="mySwiper">
+    <SwiperSlide>
+    <div className="slide slide1 rounded-2xl">
+  
+  </div>
+    </SwiperSlide>
+    <SwiperSlide>
+    <div className="slide slide2 rounded-2xl">
+    
+  </div>
+    </SwiperSlide>
+    <SwiperSlide>
+    <div className="slide slide3 rounded-2xl">
+    
+  </div>
+    </SwiperSlide>
+    </Swiper>
+    </div>
     );
 };
 
