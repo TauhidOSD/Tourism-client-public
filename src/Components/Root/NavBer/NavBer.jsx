@@ -38,16 +38,16 @@ const NavBer = () => {
 
   const links = (
     <>
-      <li>
+      <li className="mr-4">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li className="mr-4">
         <NavLink to="/AllTourist">All Tourists Spot</NavLink>
       </li>
-      <li>
+      <li className="mr-4">
         <NavLink to="/AddTourist">Add Tourists Spot</NavLink>
       </li>
-      <li>
+      <li className="mr-4">
         <NavLink to="/myListedPage">My List Page</NavLink>
       </li>
     </>
