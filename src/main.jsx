@@ -19,8 +19,9 @@ import MyListPage from './Components/Root/MyListPage/MyListPage.jsx';
 import UpdatePage from './Components/Root/UpdatePage/UpdatePage.jsx';
 import SignUp from './Components/Root/SignUp/SignUp.jsx';
 import SignIn from './Components/Root/SignIn/SignIn.jsx';
-import AuthProvider from './Provider/AuthProvider.jsx';
+// import AuthProvider from './Provider/AuthProvider.jsx';
 import Footer from './Components/Root/Footer/Footer.jsx';
+import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {

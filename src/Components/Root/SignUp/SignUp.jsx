@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 // import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {

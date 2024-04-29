@@ -2,13 +2,16 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../../Provider/AuthProvider";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+// import { AuthContext } from "../AuthProvider/AuthProvider";
+// import { AuthContext } from "../../../Provider/AuthProvider";
 
 
 const SignIn = () => {
 
     const { login, googleLogin, setUser, GitHubLogin } = useContext(AuthContext);
-  const [show, setShow] = useState(false);
+ console.log(login)
+    const [show, setShow] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const location = useLocation();
