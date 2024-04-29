@@ -86,7 +86,7 @@ const NavBer = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-2xl md:text-4xl font-bold  ">
-         <span className="font-bold text-6xl text-orange-500">T_</span>ourist
+         <span className="md:font-bold  md:text-6xl text-orange-500">T_</span>ourist
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
