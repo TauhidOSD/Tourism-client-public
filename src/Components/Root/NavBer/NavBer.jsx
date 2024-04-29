@@ -41,19 +41,19 @@ const NavBer = () => {
     <>
       <li className="mr-4">
         <NavLink to="/">
-        <div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="Home">Home</div></NavLink>
+        <div className="px-2 text-xl font-semibold py-1 rounded   w-full  mx-auto flex items-center justify-center  tooltip " data-tip="Home">Home</div></NavLink>
       </li>
       <li className="mr-4">
-        <NavLink to="/AllTourist"><div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="All">All Tourists Spot</div>
+        <NavLink to="/AllTourist"><div className="px-2 text-xl font-semibold py-1 rounded   w-full  mx-auto flex items-center justify-center  tooltip " data-tip="All">All Tourists Spot</div>
             </NavLink>
       </li>
       <li className="mr-4">
         <NavLink to="/AddTourist">
-        <div className="px-3 text-xl font-semibold py-2 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="Add">Add Tourists Spot</div></NavLink>
+        <div className="px-2 text-xl font-semibold py-1 rounded   w-full  mx-auto flex items-center justify-center  tooltip " data-tip="Add">Add Tourists Spot</div></NavLink>
       </li>
       <li className="mr-4">
         <NavLink to="/myListedPage">
-        <div className=" px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 w-full border mx-auto flex items-center justify-center  tooltip " data-tip="List">My List Page</div></NavLink>
+        <div className=" px-2 text-xl font-semibold py-1 rounded   w-full mx-auto flex items-center justify-center  tooltip " data-tip="List">My List Page</div></NavLink>
       </li>
     </>
   );
@@ -121,14 +121,14 @@ const NavBer = () => {
         {user ? (
           <button
             onClick={handleLogOut}
-            className="px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 btn btn-outline btn-error text-white font-bold"
+            className="px-3 text-xl font-semibold py-1 rounded text-orange-700  btn btn-outline btn-error text-white font-bold"
           >
             SignOut
           </button>
         ) : (
           <Link
             to="/SignIn"
-            className="px-3 text-xl font-semibold py-1 rounded text-orange-700 bg-green-100 btn btn-outline btn-error text-white font-bold"
+            className="px-3 text-xl font-semibold py-1 rounded text-orange-700  btn btn-outline btn-error text-white font-bold"
           >
             SignIn
           </Link>
