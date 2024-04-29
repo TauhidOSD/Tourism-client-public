@@ -16,8 +16,7 @@ const SignIn = () => {
   const from = location.state?.from?.pathname || "/";
   const provider = new GoogleAuthProvider();
   const GitHubProvider = new GithubAuthProvider();
-  
-    // login with email & pass
+
   const handleLogin = (event) => {
     event.preventDefault();
     setError("");
@@ -47,6 +46,38 @@ const SignIn = () => {
         setError(error.message);
       });
   };
+  
+  
+    // login with email & pass
+//   const handleLogin = (event) => {
+//     event.preventDefault();
+//     setError("");
+//     setSuccess("");
+//     // console.log(event);
+//     const form = event.target;
+//     const email = form.email.value;
+//     const password = form.password.value;
+//     console.log(email,password);
+//     login(email, password)
+    
+//       .then((result) => {
+//         // eslint-disable-next-line no-unused-vars
+//         const loggedUser = result.user;
+//         // console.log(loggedUser);
+//         navigate(from);
+//         form.reset();
+//         Swal.fire({
+//           title: "success!",
+//           text: "Login Succesfull",
+//           icon: "success",
+//           confirmButtonText: "Cool",
+//         });
+//       })
+//       .catch((error) => {
+//         // console.log(error.message);
+//         setError(error.message);
+//       });
+//   };
 
   // login with google
   const handleGoogleLogin = () => {
