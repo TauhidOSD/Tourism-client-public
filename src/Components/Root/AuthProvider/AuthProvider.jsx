@@ -36,7 +36,7 @@ const AuthProvider = ({children}) => {
         return unsubscribe();
       };
     }, []);
-    // console.log(user);
+    console.log(user);
     //  register with email and pass
     const createUser = (email, password) => {
       console.log(email, password);
