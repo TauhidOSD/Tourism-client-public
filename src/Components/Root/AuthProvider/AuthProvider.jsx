@@ -3,6 +3,8 @@ import {
     onAuthStateChanged,
     signInWithEmailAndPassword,
     signInWithPopup,
+    signOut,
+    updateProfile,
     // signOut,
     // updateProfile,
   } from "firebase/auth";
@@ -42,13 +44,13 @@ const AuthProvider = ({children}) => {
       setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
     };
-    //update user profile
-    // const updateUserData = (name, photo) => {
-    //   return updateProfile(auth.currentUser, {
-    //     displayName: name,
-    //     photoURL: photo,
-    //   });
-    // };
+    // update user profile
+    const updateUserData = (name, photo) => {
+      return updateProfile(auth.currentUser, {
+        displayName: name,
+        photoURL: photo,
+      });
+    };
     // login with email & pass
     const login = (email, password) => {
       setLoader(true);
@@ -56,11 +58,11 @@ const AuthProvider = ({children}) => {
       return signInWithEmailAndPassword(auth, email, password);
     };
     // logOut
-    // const logout = () => {
-    //   setLoader(true);
+    const logout = () => {
+      setLoader(true);
   
-    //   return signOut(auth);
-    // };
+      return signOut(auth);
+    };
     // google login
     const googleLogin = (provider) => {
       setLoader(true);
@@ -81,9 +83,9 @@ const AuthProvider = ({children}) => {
       user,
       loader,
       createUser,
-    //   updateUserData,
+      updateUserData,
       login,
-    //   logout,
+      logout,
       googleLogin,
       loading,
       // logOut,
