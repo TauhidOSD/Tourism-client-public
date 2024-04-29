@@ -169,18 +169,20 @@ const SignIn = () => {
               </div>
               <div className=" mx-auto mt-2">
                 <div className="  ">
-                  <button
-                    onClick={handleGoogleLogin}
-                    className=" px-6  py-3 btn btn-outline text-orange-400 rounded-md mb-4"
-                  >
-                      Sign in with Google
-                  </button>
-                  <button
+
+                <button
                     onClick={handleGitHubLogin}
-                    className=" px-6  py-3 btn btn-outline text-orange-400 rounded-md btn-error"
+                    className="mb-4 px-6  py-3 btn btn-outline text-orange-400 rounded-md btn-error"
                   >
                     Sign in with GitHub
                   </button>
+                  <button
+                    onClick={handleGoogleLogin}
+                    className=" px-6  py-3 btn btn-outline text-orange-400 rounded-md "
+                  >
+                      Sign in with Google
+                  </button>
+                 
                 </div>
               </div>
             </div>

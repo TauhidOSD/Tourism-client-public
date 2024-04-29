@@ -22,6 +22,7 @@ import SignIn from './Components/Root/SignIn/SignIn.jsx';
 // import AuthProvider from './Provider/AuthProvider.jsx';
 import Footer from './Components/Root/Footer/Footer.jsx';
 import AuthProvider from './Components/Root/AuthProvider/AuthProvider.jsx';
+import PrivateRoute from './Components/Root/PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/AddTourist',
-        element:<AddTourist></AddTourist>
+        element:<PrivateRoute>
+           <AddTourist/>
+           </PrivateRoute>
+         
+        
       },
       {
         path:'/NavBer',
@@ -64,7 +69,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/myListedPage',
-        element:<MyListPage></MyListPage>
+        element:<PrivateRoute><MyListPage/></PrivateRoute>
+          
+       
       },
       {
         path:'/UpdatePage/:id',
