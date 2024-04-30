@@ -8,7 +8,7 @@ const MyListPage = () => {
   console.log(user);
   const [Cards, setCards] = useState([]);
   useEffect(() => {
-    fetch(`https://tourism-server-rho.vercel.app/Place/${user?.UserEmail}`)
+    fetch(`https://tourism-server-rho.vercel.app/Placebyemail/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, [user]);

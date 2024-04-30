@@ -2,6 +2,7 @@ import Swal from 'sweetalert2'
 import UseAuth from '../Hooks/UseAuth';
 const AddTourist = () => {
   const {user}=UseAuth() || {};
+  console.log(user);
     const handleAddPlace = (event) => {
     event.preventDefault();
 
