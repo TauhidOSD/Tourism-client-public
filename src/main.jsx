@@ -66,7 +66,9 @@ const router = createBrowserRouter([
       },
       {
         path:'/:_id',
-        element:<CardDetails></CardDetails>,
+        element:<PrivateRoute>
+          <CardDetails/>
+        </PrivateRoute>,
         loader: () => fetch('https://tourism-server-rho.vercel.app/Place')
 
       },
