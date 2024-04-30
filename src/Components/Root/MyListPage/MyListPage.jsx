@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import UseAuth from "../Hooks/UseAuth";
 
 const MyListPage = () => {
+  const {user}=UseAuth() || {};
+  console.log(user);
   const [Cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("https://tourism-server-rho.vercel.app/Place")
+    fetch(`https://tourism-server-rho.vercel.app/Place/${user?.UserEmail}`)
       .then((res) => res.json())
       .then((data) => setCards(data));
-  }, []);
+  }, [user]);
   console.log(Cards);
 
   const handleDelete = (_id) => {
