@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 #T_ourist
 
-LiveUrl:(https://glittering-fox-72106b.netlify.app/myListedPage)
+LiveUrl:(https://magenta-tulumba-4b5708.netlify.app/)
 
 Information
 Analysis
