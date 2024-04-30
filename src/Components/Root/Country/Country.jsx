@@ -4,7 +4,7 @@ const Country = () => {
 
     const [Cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/Country")
+    fetch("https://tourism-server-rho.vercel.app/Country")
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, []);

@@ -33,7 +33,7 @@ const AddTourist = () => {
     console.log(newPlace);
 
     //send data to the server
-    fetch('http://localhost:5000/Place',{
+    fetch('https://tourism-server-rho.vercel.app/Place',{
         method:'POST',
         headers:{
             'content-type':'application/json'

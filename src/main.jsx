@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path:'/:_id',
         element:<CardDetails></CardDetails>,
-        loader: () => fetch('http://localhost:5000/Place')
+        loader: () => fetch('https://tourism-server-rho.vercel.app/Place')
 
       },
       {
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
       {
         path:'/UpdatePage/:id',
         element:<UpdatePage></UpdatePage>,
-        loader:({params}) => fetch(`http://localhost:5000/Place/${params.id}`)
+        loader:({params}) => fetch(`https://tourism-server-rho.vercel.app/Place/${params.id}`)
         
       },
       {

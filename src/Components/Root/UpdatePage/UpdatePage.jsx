@@ -39,7 +39,7 @@ const UpdatePage = () => {
         console.log(newPlace);
     
         //send data to the server
-        fetch(`http://localhost:5000/Place/${_id}`,{
+        fetch(`https://tourism-server-rho.vercel.app/Place/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type':'application/json'

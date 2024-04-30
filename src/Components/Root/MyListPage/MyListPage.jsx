@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const MyListPage = () => {
   const [Cards, setCards] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/Place")
+    fetch("https://tourism-server-rho.vercel.app/Place")
       .then((res) => res.json())
       .then((data) => setCards(data));
   }, []);
@@ -24,7 +24,7 @@ const MyListPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/Place/${_id}`, {
+        fetch(`https://tourism-server-rho.vercel.app/Place/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
